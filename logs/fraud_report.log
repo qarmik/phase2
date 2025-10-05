@@ -1,0 +1,13 @@
+
+=== Run at 2025-10-06T04:59:11+0530 ===
+TX 2850: amount=50000 country=NG device=emulator suspicious=True
+TX 2891: amount=500 country=IN device=android suspicious=False
+TX 1219: amount=50000 country=SG device=ios suspicious=True
+TX 6299: amount=2000 country=US device=emulator suspicious=True
+TX 8395: amount=500 country=IN device=emulator suspicious=True
+TX 4961: amount=2000 country=IN device=emulator suspicious=True
+TX 8023: amount=150000 country=IN device=emulator suspicious=True
+TX 4633: amount=50000 country=SG device=ios suspicious=True
+TX 1382: amount=2000 country=US device=emulator suspicious=True
+TX 1177: amount=500 country=IN device=ios suspicious=False
+Summary: total=10 flagged=8 flagged_ids=[2850, 1219, 6299, 8395, 4961, 8023, 4633, 1382]
