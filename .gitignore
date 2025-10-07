@@ -1,6 +1,6 @@
-# Ignore virtual environments
-.venv/
-
-# Ignore Python caches
+logs/*.log
+logs/*.json
+logs/*.jsonl
 __pycache__/
 *.pyc
+.venv/
