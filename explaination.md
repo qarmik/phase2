@@ -44,3 +44,8 @@ These are not ML models; they are rule-based controls used for early triage befo
 
 
 
+## Insurance Alignment Note
+Every flagged transaction now triggers an immutable, tamper-evident intervention log
+(JSONL format with signed hashes). This design aligns with insurer and regulatory
+audit standards for human-in-the-loop oversight.
+
