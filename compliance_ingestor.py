@@ -21,10 +21,10 @@ def extract_sections(pdf_path=INPUT_PDF):
 
     # naïve pattern anchors (tune later for RBI/EU docs)
     patterns = {
-        "scope": r"(?:scope|application)\s*[:\-]\s*(.*?)\n[a-z]",
-        "obligations": r"(?:obligations?|responsibilit(?:y|ies))\s*[:\-]\s*(.*?)\n[a-z]",
-        "penalties": r"(?:penalt(?:y|ies)|sanction)\s*[:\-]\s*(.*?)\n[a-z]",
-    }
+    "scope": r"(?i)(?:scope|application|applicability|coverage)[:\-]?\s*(.*?)\n\s*(?:obligation|responsibilit|penalt|sanction|$)",
+    "obligations": r"(?i)(?:obligations?|responsibilit(?:y|ies)|requirements)[:\-]?\s*(.*?)\n\s*(?:penalt|sanction|enforcement|$)",
+    "penalties": r"(?i)(?:penalt(?:y|ies)|sanction|non-?compliance|enforcement)[:\-]?\s*(.*)",
+}
 
     result = {}
     for key, pat in patterns.items():
