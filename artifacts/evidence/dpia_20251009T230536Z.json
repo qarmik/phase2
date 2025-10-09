@@ -1,0 +1,26 @@
+{
+  "generated_at": "2025-10-09T23:05:36.867952Z",
+  "artifact_id": "fraud_v1",
+  "model_version": "v0.2",
+  "data_categories": [
+    "txn"
+  ],
+  "processing_purpose": "fraud_scoring",
+  "risk_summary": "medium",
+  "mitigations": [
+    "human_review",
+    "data_minimisation"
+  ],
+  "lawful_basis": "legitimate_interest",
+  "fria_included": true,
+  "fria": {
+    "rights_potentially_affected": [
+      "non-discrimination",
+      "privacy"
+    ],
+    "proportionality_check": "documented",
+    "less_intrusive_alternatives": [
+      "manual_review"
+    ]
+  }
+}
