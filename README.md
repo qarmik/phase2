@@ -6,8 +6,7 @@ Phase II (Oct 2025 → Mar 2026) focuses on **artifact literacy**: building ≤ 
 ---
 
 ## 📜 Core Doctrine
-- **SBI Fortress Runway:** Stay in SBI until freelance income ≥ ₹1 L / month for 3 months.  
-- **Public Artifact Window:** Q2 2026 — timestamped, regulator-ready prototypes.  
+
 - **Artifact Families:**  
   1. Fraud Red-Team Testbed (synthetic borrowers, mule scripts)  
   2. Compliance Audit Pack (RBI + EU AI Act checklists + DPIA/FRIA)  
