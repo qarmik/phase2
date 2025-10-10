@@ -1,7 +1,8 @@
 import os
 import json
 import tempfile
-from phase2.fraud.score_engine import automated_score, InterventionLog, generate_dpia
+from fraud.score_engine import automated_score, InterventionLog, generate_dpia
+
 
 def test_automated_score_low():
     txn = {"amount": 50, "country": "IND", "age": 35, "previous_fraud_flag": False}
