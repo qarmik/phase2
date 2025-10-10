@@ -4,3 +4,11 @@ logs/*.jsonl
 __pycache__/
 *.pyc
 .venv/
+
+# Runtime and evidence files
+artifacts/evidence/*.json
+fraud/*.ndjson
+input/
+output/
+sample.json
+
