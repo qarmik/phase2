@@ -1,0 +1,21 @@
+{
+  "@context": "https://schema.org",
+  "@type": "AuditAction",
+  "artifact_id": "fraud_v1",
+  "model_version": "v0.2",
+  "timestamp": "2025-10-10T23:21:30.126971+00:00",
+  "input_hash": "4a232f5f594cee42123f0ab24314206f42dc666eb8aa28de732a82450b534b5e",
+  "output_hash": "24e44fca7547b037c5a9f23a7f6f092100e0701536455cfb2a192375b6ac57e2",
+  "score": 75,
+  "reasons": [
+    "high_amount",
+    "country_high_risk"
+  ],
+  "human_explanation": [
+    "Transaction amount exceeds configured threshold; increases probability of laundering/fraud.",
+    "Origin/destination country flagged as higher risk in our country-risk map."
+  ],
+  "dpia_ref": "../artifacts/evidence/",
+  "prev_intervention_signature": "",
+  "signature_hash": "b8494c7683af6be927061ff6f655af82126adcc2989394f5578cde5d5ebf0ef4"
+}
