@@ -1,0 +1,14 @@
+{
+  "artifact_id": "fraud_v1",
+  "model_version": "v0.2",
+  "timestamp": "2025-10-14T22:49:50.821158+00:00",
+  "to": "compliance@bank.local",
+  "score": null,
+  "reasons": null,
+  "policies": {},
+  "dpia_ref": "../artifacts/evidence/dpia_20251014T223347Z.json",
+  "prev_intervention_signature": "8d62360555324e59e4bd6b2b8361bd2055be0965215b64e29dc31c2aac46e70f",
+  "input_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "output_hash": "935d64430b486f53f3e03edd5116ef693177bb95a3b6c6c14bc8df9afb2f311e",
+  "signature_hash": "e828d2b8effff6f1ff902b49ee061c35b8bcdf7776e10c0f275ab990146f5fd9"
+}

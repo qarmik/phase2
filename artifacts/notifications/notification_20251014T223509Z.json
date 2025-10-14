@@ -1,0 +1,26 @@
+{
+  "artifact_id": "fraud_v1",
+  "model_version": "v0.2",
+  "timestamp": "2025-10-14T22:35:09.714880+00:00",
+  "to": "compliance@bank.local",
+  "score": 82,
+  "reasons": [
+    "high_amount",
+    "country_high_risk"
+  ],
+  "policies": {
+    "high_amount": [
+      "RBI: Lending Prudence Clause - enhanced verification required",
+      "EU AI Act: High-risk financial scoring - human oversight required"
+    ],
+    "country_high_risk": [
+      "AML: Country risk screening required (KYC)",
+      "EU AI Act: High-risk cross-border profiling"
+    ]
+  },
+  "dpia_ref": "../artifacts/evidence/",
+  "prev_intervention_signature": "",
+  "input_hash": "36c07b1667a2ad3348dea34df91967767635f62667af13f4eccb390b1e8c8ab0",
+  "output_hash": "011a69fdfee5b88f7df5e2a1980f5c858714d04c54eba4e9b3e5fa34fd628c76",
+  "signature_hash": "f04e00626eda38d596d822b763d88fae8e4cff6e7b12869d7ba7ada093ed2d23"
+}
