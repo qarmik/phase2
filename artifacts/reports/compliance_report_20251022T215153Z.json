@@ -1,0 +1,51 @@
+{
+  "input_path": "artifacts/evidence/dpia_20251014T223347Z.json",
+  "input_type": "dpia",
+  "generated_at": "2025-10-22T21:51:53.579541+00:00",
+  "findings": {
+    "present": [
+      "data_categories",
+      "processing_purpose",
+      "risk_summary",
+      "mitigations",
+      "lawful_basis",
+      "fria"
+    ],
+    "missing": [],
+    "raw": {
+      "generated_at": "2025-10-14T22:33:47.251173+00:00",
+      "artifact_id": "fraud_v1",
+      "model_version": "v0.2",
+      "data_categories": [
+        "id",
+        "txn"
+      ],
+      "processing_purpose": "credit_risk",
+      "risk_summary": "high",
+      "mitigations": [
+        "human_review",
+        "data_minimisation"
+      ],
+      "lawful_basis": "legitimate_interest",
+      "fria_included": true,
+      "fria": {
+        "rights_potentially_affected": [
+          "non-discrimination",
+          "privacy"
+        ],
+        "proportionality_check": "documented",
+        "less_intrusive_alternatives": [
+          "manual_review"
+        ]
+      }
+    }
+  },
+  "risk_level": "high",
+  "mappings": {
+    "eu_ai_act": [
+      "high_risk"
+    ],
+    "iso42001_hints": []
+  },
+  "missing_evidence": []
+}
