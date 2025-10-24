@@ -1,0 +1,14 @@
+{
+  "ai_act_counts": {
+    "high_risk": 1
+  },
+  "iso_counts": {},
+  "examples": {
+    "ai_act": {
+      "high_risk": [
+        "artifacts/evidence/dpia_20251014T223347Z.json"
+      ]
+    },
+    "iso": {}
+  }
+}
