@@ -1,0 +1,13 @@
+{
+  "artifact_id": "fraud_v1",
+  "model_version": "v0.2",
+  "generated_at": "2025-10-26T10:40:19.722383+00:00",
+  "notify_to": "compliance@bank.local",
+  "plan_path": "artifacts/reports/remediation_plan_20251024T002135Z.json",
+  "escalation_summary": {
+    "total": 1,
+    "escalations": 0
+  },
+  "escalations": [],
+  "signature_hash": "b18c2b4f534cf224a94ddf1c1c9182ee1fecc88e5a467c253a29126a0aa7a624"
+}
