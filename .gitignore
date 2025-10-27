@@ -1,18 +1,18 @@
-logs/*.log
-logs/*.json
-logs/*.jsonl
+# local backups + editor artifacts
+*.bak
+*.swp
+*~
+
+# generated report artifacts (keep repo small; track only curated evidence)
+artifacts/reports/*.png
+artifacts/reports/*.jsonld
+artifacts/reports/heatmap_summary_*.json
+artifacts/reports/risk_heatmap_*.png
+artifacts/reports/remediation_plan_*.json
+# NOTE: remove the next line if you WANT ownership files tracked for audit
+artifacts/reports/ownership_*.json
+
+# ensure local env / caches ignored
+.venv/
 __pycache__/
 *.pyc
-.venv/
-
-# Runtime and evidence files
-artifacts/evidence/*.json
-fraud/*.ndjson
-input/
-output/
-sample.json
-
-sample_score.json
-sample_score.json
-sample_score.json
-fraud/*.bak
