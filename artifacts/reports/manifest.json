@@ -1,2 +1,8 @@
-{"report":"compliance_report_20251022T215153Z.json","ts":"20251022T215731Z"}
-{"ownership_files": } , "ts":"20251027T005842Z" }
+{
+  "generated_at": "2025-10-29T00:59:08.295927+00:00",
+  "packages": [
+    {
+      "ts": "20251022T215731Z"
+    }
+  ]
+}
