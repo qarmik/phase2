@@ -3,6 +3,11 @@
   "packages": [
     {
       "ts": "20251022T215731Z"
+    },
+    {
+      "package": "notified_body_package_20251029T004318Z.zip",
+      "signature": "605107939a448678f20ff80cc5263b7dcc71b6291fecf3e9c84efce32a39db08",
+      "ts": "20251029T004318Z"
     }
   ]
 }
