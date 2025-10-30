@@ -1,0 +1,9 @@
+{
+  "provider": "simulated-anchor",
+  "receipt_id": "f770754d2c2a440f31777dfaca40d10c2db3146126f96388",
+  "package": "notified_body_package_20251029T004318Z.zip",
+  "package_sha256": "7c6f61acc8ab5f51cddaea4915ca9a310617744cd8195b9ad2db76486b1aa32f",
+  "anchored_at": "2025-10-30T00:40:34.583063+00:00",
+  "raw_timestamp": "package:notified_body_package_20251029T004318Z.zip\nsha256:7c6f61acc8ab5f51cddaea4915ca9a310617744cd8195b9ad2db76486b1aa32f\ngenerated_at:20251030T001428Z\n",
+  "signature": "67108fd5b8879787a114789bc70b744fd4929560247d07eca2cee20587ae59da"
+}
