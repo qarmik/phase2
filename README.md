@@ -1,3 +1,6 @@
+Protocol-Version: Qv Rev 7 (Draft 0.1)
+classification: EXTERNAL-INDUSTRY
+
 # Indus V-ai — Phase II: Artifact Literacy Campaign (2025–2026)
 
 This repository contains the training and artifact-building sequence for the Indus V-ai initiative — a boutique assurance and adversarial oversight lab.  

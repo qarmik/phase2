@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "InterventionLog (Protocol Qv Rev 7)",
+  "description": "Immutable intervention log. Annotated to map to ISO 42001 §8.7 and NIST AI RMF 600-1. Fields added for Quantum Verification Module (QVM) and energy metrics.",
+  "type": "object",
+  "properties": {
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "UTC timestamp. (ISO 8601) — map: ISO 42001 §8.7"
+    },
+    "artifact_id": { "type": "string", "description": "Artifact identifier (e.g. fraud_v1)." },
+    "model_version": { "type": "string", "description": "Model or rule version." },
+    "input_hash": { "type": "string", "description": "SHA-256 of canonicalized input." },
+    "output_hash": { "type": "string", "description": "SHA-256 of canonicalized output." },
+    "signature_hash": { "type": "string", "description": "Signature of the log entry (human/system) — insurer-grade." },
+    "human_id": { "type": ["string","null"], "description": "Operator id if human intervened." },
+    "human_reason": { "type": ["string","null"], "description": "Short human justification text." },
+    "decision_summary": { "type": ["string","null"], "description": "Brief decision summary." },
+    "quantum_verification_hash": {
+      "type": ["string","null"],
+      "description": "Optional QVM proof hash (Rev7: QVM augmentative). Map: QVM module outputs -> quantum_verification_hash."
+    },
+    "incident_report_id": {
+      "type": ["string","null"],
+      "description": "If the decision relates to an Article 73/55 incident, include regulator incident_report_id (if available)."
+    },
+    "gpa_model_id": {
+      "type": ["string","null"],
+      "description": "GPAI/systemic-risk model identifier where applicable."
+    },
+    "joules_per_verified_operation": {
+      "type": ["number","null"],
+      "description": "Energy KPI: joules per verified op. (Compute-aware design note)"
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Free-form metadata for provenance (tool, version, run_id).",
+      "properties": {
+        "tool": { "type": "string" },
+        "version": { "type": "string" },
+        "run_id": { "type": "string" }
+      }
+    }
+  },
+  "required": [
+    "timestamp",
+    "artifact_id",
+    "model_version",
+    "input_hash",
+    "output_hash",
+    "signature_hash"
+  ],
+  "additionalProperties": false
+}
