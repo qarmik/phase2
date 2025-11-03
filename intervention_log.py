@@ -121,7 +121,10 @@ def verify_record(record: Dict[str, Any]) -> bool:
     mv = str(record.get("model_version",""))
     ih = str(record.get("input_hash",""))
     oh = str(record.get("output_hash",""))
-    sig_base = "|".join([aid, mv, ih, oh])
+    hid = str(record.get("human_id","") or "")
+    hreason = str(record.get("human_reason","") or "")
+    dsummary = str(record.get("decision_summary","") or "")
+    sig_base = "|".join([aid, mv, ih, oh, hid, hreason, dsummary])
     expected_sig = hashlib.sha256(sig_base.encode("utf-8")).hexdigest()
     if expected_sig != record.get("signature_hash"):
         return False
