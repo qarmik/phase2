@@ -9,13 +9,13 @@ Provides both legacy function signatures used by older tests:
 And:
  - verify_record(record) -> bool
 
-Usage:
- - The shim maps legacy positional args into the new entry dict and calls
-   fraud.intervention_log.emit_intervention(entry).
- - It also exposes emit_intervention alias for callers using the new name.
+verify_record now performs integrity checks:
+ - recomputes input_hash/output_hash from input/output if present
+ - recomputes deterministic signature_hash (sha256 of artifact_id|model_version|input_hash|output_hash)
+ - returns False on any mismatch (tamper detection)
 """
 from __future__ import annotations
-import json
+import json, hashlib
 from typing import Dict, Any
 
 # import the canonical implementation
@@ -23,6 +23,10 @@ try:
     from fraud.intervention_log import emit_intervention as _emit_intervention
 except Exception as e:
     raise ImportError("Could not import fraud.intervention_log: " + str(e))
+
+def _sha256_of_obj(obj: Any) -> str:
+    j = json.dumps(obj, sort_keys=True, separators=(',',':'), ensure_ascii=False)
+    return hashlib.sha256(j.encode('utf-8')).hexdigest()
 
 def append_intervention(*args, **kwargs) -> Dict[str, Any]:
     """
@@ -33,18 +37,12 @@ def append_intervention(*args, **kwargs) -> Dict[str, Any]:
 
     New signature:
       append_intervention(entry_dict)
-
-    Behavior:
-      - If called with one positional arg and it's a dict, treat as new-style.
-      - If called with legacy 6/7 positional args, map to entry dict.
-      - If called with keyword args, accept artifact_id, model_version, input, decision_summary, human_id, human_reason, output.
     """
     # case 1: new style single dict
     if len(args) == 1 and isinstance(args[0], dict) and not kwargs:
         return _emit_intervention(args[0])
 
     # case 2: legacy signature positional parsing
-    # Accept len 6 or 7 (output optional)
     if len(args) >= 6:
         artifact_id = args[0]
         model_version = args[1]
@@ -54,7 +52,6 @@ def append_intervention(*args, **kwargs) -> Dict[str, Any]:
         human_reason = args[5]
         output_obj = args[6] if len(args) > 6 else kwargs.get("output", None)
     else:
-        # also allow kwargs style: artifact_id=..., model_version=..., input=..., etc.
         artifact_id = kwargs.get("artifact_id")
         model_version = kwargs.get("model_version")
         input_obj = kwargs.get("input")
@@ -74,22 +71,26 @@ def append_intervention(*args, **kwargs) -> Dict[str, Any]:
     if output_obj is not None:
         entry["output"] = output_obj
 
-    # merge any extra kwargs into metadata if present
     extras = {k: v for k, v in kwargs.items() if k not in ("artifact_id", "model_version", "input", "decision_summary", "human_id", "human_reason", "output")}
     if extras:
         entry.setdefault("metadata", {}).update({"shim_extras": extras})
 
     return _emit_intervention(entry)
 
-# keep alias for new name
+# alias for new name
 emit_intervention = append_intervention
 
 def verify_record(record: Dict[str, Any]) -> bool:
     """
-    Lightweight verification used by tests:
-    - checks presence of required keys from Rev7 schema
-    - verifies input_hash/output_hash/signature_hash exist (non-empty)
-    Returns True if minimal checks pass, else False.
+    Perform tamper-detection and minimal schema checks.
+
+    Steps:
+    1. Ensure required keys exist.
+    2. If 'input' present, recompute input_hash and compare to record['input_hash'] (if present).
+    3. If 'output' present, recompute output_hash and compare to record['output_hash'] (if present).
+    4. Recompute deterministic signature_hash = sha256(artifact_id|model_version|input_hash|output_hash)
+       and compare to record['signature_hash'].
+    Returns True if all checks pass, False otherwise.
     """
     required = ["timestamp", "artifact_id", "model_version", "input_hash", "output_hash", "signature_hash"]
     for k in required:
@@ -100,4 +101,29 @@ def verify_record(record: Dict[str, Any]) -> bool:
             return False
         if isinstance(v, str) and v.strip() == "":
             return False
+
+    # recompute input/output hashes if possible and verify
+    try:
+        if "input" in record:
+            recomputed_ih = _sha256_of_obj(record["input"])
+            if record.get("input_hash") and recomputed_ih != record.get("input_hash"):
+                return False
+        if "output" in record:
+            recomputed_oh = _sha256_of_obj(record["output"])
+            if record.get("output_hash") and recomputed_oh != record.get("output_hash"):
+                return False
+    except Exception:
+        # if JSON serialization fails, treat as tamper / invalid
+        return False
+
+    # recompute signature hash deterministically
+    aid = str(record.get("artifact_id",""))
+    mv = str(record.get("model_version",""))
+    ih = str(record.get("input_hash",""))
+    oh = str(record.get("output_hash",""))
+    sig_base = "|".join([aid, mv, ih, oh])
+    expected_sig = hashlib.sha256(sig_base.encode("utf-8")).hexdigest()
+    if expected_sig != record.get("signature_hash"):
+        return False
+
     return True
