@@ -16,3 +16,10 @@ artifacts/reports/ownership_*.json
 .venv/
 __pycache__/
 *.pyc
+# Evidence & generated reports (do not commit)
+artifacts/evidence/
+artifacts/reports/
+logs/
+output/
+input/
+sample*.json

@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EvidencePackageManifest (Protocol Qv Rev 7)",
+  "description": "Manifest for notified-body / release evidence package. Includes per-file sha256, package signature, receipts and QVM fields. Annotated to map to ISO 42001, NIST, and EU AI Act evidence requirements.",
+  "type": "object",
+  "properties": {
+    "package_name": { "type": "string" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "file": { "type": "string" },
+          "size": { "type": "integer" },
+          "sha256": { "type": "string" }
+        },
+        "required": ["file","size","sha256"]
+      }
+    },
+    "package_signature": {
+      "type": "string",
+      "description": "SHA-256 (or equivalent) of concatenated file hashes + ts. Used as package-level signature for insurer/regulator audit."
+    },
+    "receipts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "provider": { "type": "string" },
+          "receipt_id": { "type": "string" },
+          "anchored_at": { "type": "string", "format": "date-time" },
+          "raw_provider_response": { "type": ["object","null"] }
+        },
+        "required": ["provider","receipt_id","anchored_at"]
+      }
+    },
+    "quantum_verification_hash": {
+      "type": ["string","null"],
+      "description": "Optional QVM verification proof for package (Rev7 augmentation)."
+    },
+    "joules_total": {
+      "type": ["number","null"],
+      "description": "Optional aggregate energy usage for package creation (joules)."
+    },
+    "evidence_owner": { "type": ["string","null"], "description": "Owner (team/person) responsible for the evidence package." }
+  },
+  "required": ["package_name","generated_at","files","package_signature"]
+}
