@@ -27,3 +27,35 @@ Operational posture:
 - For auditors who want per-entry verification today, run `python tools/log_replay.py` to see which entries verify under currently available public keys; results are recorded in `logs/replay_summary.csv`.
 - If further forensic analysis is requested we will escalate with an extended, documented sweep and provide a forensic annex recording methods and outcomes.
 
+Authoritative release and checksum
+
+The authoritative audit export for Day 24 (Rev7 public snapshot) is published at:
+https://github.com/qarmik/phase2/releases/tag/EU-FRAUD-TSA-2025Q4-snapshot
+
+Asset: fraud_audit_export_FRAUD-TSA-2025-AUTH-SNAPSHOT.zip
+SHA-256: <<ce27e42ef58c75c1b2c9421613e2abecc5db4e04a8055a0221d424c11da66643>>
+
+This ZIP contains:
+- logs/public_timestamp.ndjson (append-only chain),
+- logs/public_timestamp.ndjson.sig and logs/public_timestamp.jsonld.sig (detached snapshot signatures),
+- keys/indusv.pub.pem (current public key),
+- docs/release_note_DAY24_SNAPSHOT_SIGNED.md (release note and canonicalisation/key-rotation summary),
+- logs/find_canonical_deep.txt and logs/replay_summary.csv (evidence of canonicalisation attempt and replay summary).
+
+Verification instructions for auditors:
+1. Download the ZIP from the release URL above.
+2. Compute SHA-256 locally (e.g., `python -c "import hashlib;print(hashlib.sha256(open('fraud_audit_export_...zip','rb').read()).hexdigest())"`) and confirm it equals the SHA-256 shown here.
+3. Verify detached snapshots using `keys/indusv.pub.pem`. For example:
+   `openssl dgst -sha256 -verify keys/indusv.pub.pem -signature public_timestamp.ndjson.sig public_timestamp.ndjson`
+If you require per-entry verification and legacy-key reconciliation, please request a forensic annex; we attempted automated canonicalisation reproduction and documented methods and outcomes in `logs/find_canonical_deep.txt`.
+
+
+
+## Release integrity (audit record)
+
+Authoritative release (Day 24, Rev7):
+Release URL: '"$RELEASE_URL"'
+Asset: fraud_audit_export_FRAUD-TSA-2025-AUTH-SNAPSHOT.zip
+SHA-256: '"'"$ZIP_SHA"'"'
+
+Contents and verification instructions are included in the repository and the ZIP (logs, detached signatures, public key, replay/find logs). See the Auditor notice — canonicalisation & key-rotation summary above for context.
