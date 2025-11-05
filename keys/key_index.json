@@ -1,0 +1,24 @@
+{
+"keys": [
+{
+"key_id": "indusv_v2",
+"role": "signing",
+"status": "active",
+"pub_path": "keys/indusv.pub.pem",
+"private_archive_path": "keys/archive/indusv_v2.pem.gpg",
+"fingerprint_der_sha256": "f39e1f866e7e9a05368f292eefcacc6b598050821065d8275fef9dfe0e74378f",
+"created_at": "2025-11-05T10:26:57Z",
+"notes": "Current key used for authoritative snapshots. Keep private archive offline and encrypted."
+},
+{
+"key_id": "indusv_v1",
+"role": "signing",
+"status": "archived_or_missing",
+"pub_path": "keys/indusv_v1.pub.pem",
+"private_archive_path": "keys/archive/indusv_v1.pem.gpg",
+"fingerprint_der_sha256": "{{legacy_fingerprint_or_UNKNOWN}}",
+"created_at": "{{2025-11-05T17:15:14Z}}",
+"notes": "Legacy key; if recovered, use for retrospective verification of historical entries."
+}
+]
+}
