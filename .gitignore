@@ -23,3 +23,11 @@ logs/
 output/
 input/
 sample*.json
+keys/*.pem
+keys/archive/*.gpg
+# local sensitive files and temporary downloads
+downloaded_audit.zip
+PrivatekeyIndusVai
+keys/*.hmac.secret
+keys/*.secret
+keys/archive/*
