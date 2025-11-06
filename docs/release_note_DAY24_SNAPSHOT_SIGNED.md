@@ -56,6 +56,5 @@ If you require per-entry verification and legacy-key reconciliation, please requ
 Authoritative release (Day 24, Rev7):
 Release URL: '"$RELEASE_URL"'
 Asset: fraud_audit_export_FRAUD-TSA-2025-AUTH-SNAPSHOT.zip
-SHA-256: '"'"$ZIP_SHA"'"'
 
 Contents and verification instructions are included in the repository and the ZIP (logs, detached signatures, public key, replay/find logs). See the Auditor notice — canonicalisation & key-rotation summary above for context.
