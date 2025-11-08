@@ -31,3 +31,49 @@ PrivatekeyIndusVai
 keys/*.hmac.secret
 keys/*.secret
 keys/archive/*
+
+# audit & distribution artifacts (keep out of repo; keep offline)
+dist/
+dist/*.zip
+dist/*.sig
+dist/*.sha256.txt
+dist/*anchor_receipt*
+
+# local generated bundles & samples
+artifacts/
+downloaded_audit.zip
+PrivatekeyIndusVai
+
+# key secrets and archives (should never be committed)
+keys/*.pem
+keys/*.gpg
+keys/*.hmac.secret
+keys/archive/
+keys/*.secret
+
+# editor & temp files
+*.bak
+*.swp
+*~
+temp_untracked_list.txt
+
+dist/
+dist/*.zip
+dist/*.sig
+dist/*.sha256.txt
+dist/*anchor_receipt*
+
+artifacts/
+downloaded_audit.zip
+PrivatekeyIndusVai
+
+keys/*.pem
+keys/*.gpg
+keys/*.hmac.secret
+keys/archive/
+keys/*.secret
+
+*.bak
+*.swp
+*~
+temp_untracked_list.txt
