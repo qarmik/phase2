@@ -1,0 +1,79 @@
+{
+  "76ed84951777d16b81cd3484395e8c97ee6b9721c5e217d9301ecc359eb6938b": {
+    "artifact_id": "TEST-ART-0001",
+    "entry_hash": "76ed84951777d16b81cd3484395e8c97ee6b9721c5e217d9301ecc359eb6938b",
+    "issue": "legacy_pub_missing_or_signature_mismatch",
+    "notes": "no_hmac_secret",
+    "recorded_at": "2025-11-08T12:36:16.467090Z"
+  },
+  "757e4159563edff828d0f0cea3dc529f215899151bcac5a1ceca06130dd230ac": {
+    "artifact_id": "FRAUD-TSA-2025-001",
+    "entry_hash": "757e4159563edff828d0f0cea3dc529f215899151bcac5a1ceca06130dd230ac",
+    "issue": "legacy_pub_missing_or_signature_mismatch",
+    "notes": "",
+    "recorded_at": "2025-11-08T12:36:16.467326Z"
+  },
+  "f3b87b3838955e6e11887cb78c8173f669a1e6c3ce2eb57716edd60f1f8ea60b": {
+    "artifact_id": "FRAUD-TSA-2025-002",
+    "entry_hash": "f3b87b3838955e6e11887cb78c8173f669a1e6c3ce2eb57716edd60f1f8ea60b",
+    "issue": "legacy_pub_missing_or_signature_mismatch",
+    "notes": "",
+    "recorded_at": "2025-11-08T12:36:16.467331Z"
+  },
+  "64cc04721d134667bddd58bb3f802a243ab5ebf7a515f4f0a2df5131671d1503": {
+    "artifact_id": "FRAUD-TSA-2025-002-REISSUE",
+    "entry_hash": "64cc04721d134667bddd58bb3f802a243ab5ebf7a515f4f0a2df5131671d1503",
+    "issue": "legacy_pub_missing_or_signature_mismatch",
+    "notes": "",
+    "recorded_at": "2025-11-08T12:36:16.467334Z"
+  },
+  "58c96273ae95d1f28cf56fc051c8d57c282596ab8b2f8b7b2106279bce45d824": {
+    "artifact_id": "FRAUD-TSA-2025-REISSUE-AUTH",
+    "entry_hash": "58c96273ae95d1f28cf56fc051c8d57c282596ab8b2f8b7b2106279bce45d824",
+    "issue": "legacy_pub_missing_or_signature_mismatch",
+    "notes": "",
+    "recorded_at": "2025-11-08T12:36:16.467336Z"
+  },
+  "6053801f8091f5e6e2205b595c05bd0cb1502af8be07c43968cf9b1040168d17": {
+    "artifact_id": "FRAUD-TSA-2025-REISSUE-AUTH",
+    "entry_hash": "6053801f8091f5e6e2205b595c05bd0cb1502af8be07c43968cf9b1040168d17",
+    "issue": "legacy_pub_missing_or_signature_mismatch",
+    "notes": "",
+    "recorded_at": "2025-11-08T12:36:16.467339Z"
+  },
+  "7c6fbb40b2477be57b47f8dc2b2b9a2c3186d6d4348b92e3f20e1ed484094e96": {
+    "artifact_id": "FRAUD-TSA-2025-REISSUE-AUTH2",
+    "entry_hash": "7c6fbb40b2477be57b47f8dc2b2b9a2c3186d6d4348b92e3f20e1ed484094e96",
+    "issue": "legacy_pub_missing_or_signature_mismatch",
+    "notes": "",
+    "recorded_at": "2025-11-08T12:36:16.467342Z"
+  },
+  "417b545ab6b4a414015ce227c35724a5a24b52b686050399f489583fab7efe1b": {
+    "artifact_id": "FRAUD-TSA-2025-REISSUE-FIXED",
+    "entry_hash": "417b545ab6b4a414015ce227c35724a5a24b52b686050399f489583fab7efe1b",
+    "issue": "legacy_pub_missing_or_signature_mismatch",
+    "notes": "",
+    "recorded_at": "2025-11-08T12:36:16.467344Z"
+  },
+  "e9d78533406ef75730742bdfe5b60144759e626ec6d8dddd637a7d482309660d": {
+    "artifact_id": "FRAUD-TSA-2025-MANUAL",
+    "entry_hash": "e9d78533406ef75730742bdfe5b60144759e626ec6d8dddd637a7d482309660d",
+    "issue": "legacy_pub_missing_or_signature_mismatch",
+    "notes": "",
+    "recorded_at": "2025-11-08T12:36:16.467346Z"
+  },
+  "cdda0006d44a56049b849f86d25e04c99f69c8f9fa106de0865fed385977f1f6": {
+    "artifact_id": "FRAUD-TSA-2025-MANUAL",
+    "entry_hash": "cdda0006d44a56049b849f86d25e04c99f69c8f9fa106de0865fed385977f1f6",
+    "issue": "legacy_pub_missing_or_signature_mismatch",
+    "notes": "",
+    "recorded_at": "2025-11-08T12:36:16.467348Z"
+  },
+  "1422121dc9927565fe34abdc7442b97fa82686c13513adf1c4e37001898a7327": {
+    "artifact_id": "FRAUD-TSA-2025-AUTH-VERIFIED",
+    "entry_hash": "1422121dc9927565fe34abdc7442b97fa82686c13513adf1c4e37001898a7327",
+    "issue": "legacy_pub_missing_or_signature_mismatch",
+    "notes": "",
+    "recorded_at": "2025-11-08T12:36:16.467351Z"
+  }
+}

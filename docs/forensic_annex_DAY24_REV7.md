@@ -176,3 +176,5 @@ I certify that the above forensic reconstruction accurately reflects the procedu
 
 
 
+
+- NOTE (Day25-Reconciliation): legacy public key indusv_v1 not present locally; see logs/verification_annotations.json for details. Recorded: 2025-11-08T12:36:16.517826Z

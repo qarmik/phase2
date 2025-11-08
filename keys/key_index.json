@@ -19,6 +19,15 @@
       "fingerprint_der_sha256": "{{legacy_fingerprint_or_UNKNOWN}}",
       "created_at": "{{original_creation_timestamp}}",
       "notes": "Legacy key: lost or not available in local backups. If recovered, compute its fingerprint and replace placeholders."
+    },
+    {
+      "key_id": "indusv_v1_legacy_or_missing",
+      "role": "signing_legacy",
+      "status": "missing",
+      "pub_path": "keys/indusv_v1.pub.pem (missing)",
+      "fingerprint_der_sha256": "UNKNOWN",
+      "created_at": "2025-11-08T12:36:16.490702Z",
+      "notes": "Legacy key expected for historical verification; missing locally as of script run."
     }
   ]
 }
