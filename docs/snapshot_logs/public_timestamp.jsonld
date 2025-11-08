@@ -1,0 +1,16 @@
+{
+  "@context": "https://www.w3.org/2019/wot/td/v1",
+  "@type": "PublicationTimestamp",
+  "artifact_id": "TEST-ART-0001",
+  "timestamp_utc": "2025-11-08T18:17:06+00:00",
+  "bundle_path": "C:\\Users\\lenovo\\indusv-ai\\phase2\\dist\\test_bundle.txt",
+  "public_hash": "9c52b06990b174d280e7c4b978f5e2c52328af4a5d34cd40c25dbc143db33175",
+  "qv_version": "Rev7",
+  "quantum_verification_hash": "qvm_hash:00000000-0000-0000-0000-000000000000",
+  "incident_report_id": "",
+  "prev_entry_hash": "",
+  "signer_pub_fingerprint_sha256": "",
+  "entry_hash": "43b4500a031c2a6bbc3b5b61b139889f9c2cd8dadc1d67bb87d998bea2b1a6d7",
+  "signature_method": "hmac",
+  "signature_b64": "KGgc/PyR3h3k/r6b6VR2+arz1YWmT/h7hIgXLhnjim0="
+}

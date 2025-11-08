@@ -1,0 +1,20 @@
+{
+  "@context": "https://w3id.org/monitorability/trace/v1",
+  "id": "urn:trace:phase2:stage1:fraud:FRAUD-TSA-2025-AUTH-VERIFIED:20251108T182706Z",
+  "generated_at": "2025-11-08T18:27:06.665817Z",
+  "artifact_id": "FRAUD-TSA-2025-AUTH-VERIFIED",
+  "entry_hash": "1422121dc9927565fe34abdc7442b97fa82686c13513adf1c4e37001898a7327",
+  "cot_stub": [
+    "Applied rule: velocity>3 in 24h",
+    "Human reviewer: reviewed receipts",
+    "Matched merchant pattern"
+  ],
+  "decision_summary": [
+    "AUTH_REISSUE_SIGNED_WITH_CURRENT_KEY",
+    "f293659eb5081d29013c80fd242dd568857fadf5e38601c9a96029bcee8f394a"
+  ],
+  "faithfulness_score": 0.0,
+  "qvm_version": "Rev7-stub",
+  "quantum_verification_hash": "qvm_hash:e4b7678f8e926f4908a2dbd3b67dae65d34b9812c3c9c0b1b33cdd5e3fcb0549",
+  "notes": "This is a monitorability trace stub for Day-25. Use as input for auditor review."
+}

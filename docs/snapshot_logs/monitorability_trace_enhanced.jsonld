@@ -1,0 +1,13 @@
+{
+  "@context": "https://w3id.org/monitorability/trace/v1",
+  "generated_at": "2025-11-08T18:27:06.759646Z",
+  "artifact_id": "FRAUD-TSA-2025-AUTH-VERIFIED",
+  "entry_hash": "1422121dc9927565fe34abdc7442b97fa82686c13513adf1c4e37001898a7327",
+  "cot_tokens_count": 12,
+  "decision_tokens_count": 2,
+  "weighted_faithfulness": 0.0,
+  "faithfulness_flag": "ALERT",
+  "feature_details": [],
+  "quantum_verification_hash": "qvm_hash:8c59245cf07e1322c15649da7c1183213e7b457055740bb596a811e52c729b4f",
+  "notes": "Weighted TF-IDF faithfulness computed by tools/qvm_scoring_upgrade.py under Protocol Qv Rev 7"
+}

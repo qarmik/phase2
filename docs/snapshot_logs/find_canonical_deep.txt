@@ -1,0 +1,47 @@
+Examining entry indexes: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+--- Entry idx 0 artifact_id: TEST-ART-0001
+ stored entry_hash: 76ed84951777d16b81cd3484395e8c97ee6b9721c5e217d9301ecc359eb6938b
+ No matches found (tried 4032 variants).
+
+--- Entry idx 1 artifact_id: FRAUD-TSA-2025-001
+ stored entry_hash: 757e4159563edff828d0f0cea3dc529f215899151bcac5a1ceca06130dd230ac
+ No matches found (tried 4032 variants).
+
+--- Entry idx 2 artifact_id: FRAUD-TSA-2025-002
+ stored entry_hash: f3b87b3838955e6e11887cb78c8173f669a1e6c3ce2eb57716edd60f1f8ea60b
+ No matches found (tried 4032 variants).
+
+--- Entry idx 3 artifact_id: FRAUD-TSA-2025-002-REISSUE
+ stored entry_hash: 64cc04721d134667bddd58bb3f802a243ab5ebf7a515f4f0a2df5131671d1503
+ No matches found (tried 4032 variants).
+
+--- Entry idx 4 artifact_id: FRAUD-TSA-2025-REISSUE-AUTH
+ stored entry_hash: 58c96273ae95d1f28cf56fc051c8d57c282596ab8b2f8b7b2106279bce45d824
+ No matches found (tried 4032 variants).
+
+--- Entry idx 5 artifact_id: FRAUD-TSA-2025-REISSUE-AUTH
+ stored entry_hash: 6053801f8091f5e6e2205b595c05bd0cb1502af8be07c43968cf9b1040168d17
+ No matches found (tried 4032 variants).
+
+--- Entry idx 6 artifact_id: FRAUD-TSA-2025-REISSUE-AUTH2
+ stored entry_hash: 7c6fbb40b2477be57b47f8dc2b2b9a2c3186d6d4348b92e3f20e1ed484094e96
+ No matches found (tried 4032 variants).
+
+--- Entry idx 7 artifact_id: FRAUD-TSA-2025-REISSUE-FIXED
+ stored entry_hash: 417b545ab6b4a414015ce227c35724a5a24b52b686050399f489583fab7efe1b
+ No matches found (tried 4032 variants).
+
+--- Entry idx 8 artifact_id: FRAUD-TSA-2025-MANUAL
+ stored entry_hash: e9d78533406ef75730742bdfe5b60144759e626ec6d8dddd637a7d482309660d
+ No matches found (tried 4032 variants).
+
+--- Entry idx 9 artifact_id: FRAUD-TSA-2025-MANUAL
+ stored entry_hash: cdda0006d44a56049b849f86d25e04c99f69c8f9fa106de0865fed385977f1f6
+ No matches found (tried 4032 variants).
+
+--- Entry idx 10 artifact_id: FRAUD-TSA-2025-AUTH-VERIFIED
+ stored entry_hash: 1422121dc9927565fe34abdc7442b97fa82686c13513adf1c4e37001898a7327
+ No matches found (tried 4032 variants).
+
+No matches found for tested entries.
