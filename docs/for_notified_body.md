@@ -52,3 +52,7 @@ This package (`dist/fraud\_audit\_export\_FRAUD-TSA-2025-AUTH-SNAPSHOT.zip`) con
 
 
 
+
+- Audit packet: https://github.com/qarmik/phase2/releases/download/EU-FRAUD-TSA-2025Q4-snapshot/audit_packet_EU-FRAUD-TSA-2025Q4-snapshot_20251108T183603Z.zip
+  SHA-256: 3d54e907a79c6e9d6edbfb35640a22b97b225f238d0d58738fb37da46908c4f1
+
