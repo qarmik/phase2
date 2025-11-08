@@ -1,5 +1,5 @@
 # .github/workflows/monitor-ci.yml
-name: Monitor CI — Day25
+name: Monitor CI — Day25 (Rev7)
 
 on:
   push:
@@ -20,7 +20,9 @@ jobs:
           python-version: "3.11"
 
       - name: Install test deps
-        run: python -m pip install --upgrade pip pytest
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
 
       - name: Run QVM explainability trace
         run: python tools/qvm_explainability_trace.py
@@ -33,3 +35,30 @@ jobs:
 
       - name: Run pytest
         run: python -m pytest -q
+
+      # ---- New CI-safe monitor verification section ----
+      - name: Prepare monitor logs (CI-safe defaults)
+        run: |
+          mkdir -p logs
+          # Minimal placeholder trace for CI
+          cat > logs/monitorability_trace.jsonld <<'JSON'
+{
+  "artifact_id": "CI-DUMMY-TRACE",
+  "generated_at": "2025-11-09T00:00:00Z",
+  "faith_scores": [0.8],
+  "qvm_score": 0.9,
+  "explanation_text": "CI placeholder explanation: model flagged due to simple heuristic.",
+  "model_output_text": "flagged:true;reason=amount"
+}
+JSON
+          # Minimal placeholder monitor log
+          echo '[]' > logs/monitor_log.json
+
+      - name: Run Monitorability Verification (gate)
+        run: |
+          echo "=== Running monitorability gate ==="
+          python tools/verify_monitorability.py \
+            --trace logs/monitorability_trace.jsonld \
+            --monitor logs/monitor_log.json \
+            --out logs/monitorability_snapshot.jsonld
+          echo "=== Monitorability check complete ==="
