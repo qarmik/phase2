@@ -1,0 +1,7 @@
+{
+  "artifact_id": "TEST-RELEASE-0002",
+  "stored_entry_hash": "656c0902ef26bec96103b63499e2464e44bd0a1f16f04f4ef6b88360cdfd95aa",
+  "computed_canonical_sha256": "656c0902ef26bec96103b63499e2464e44bd0a1f16f04f4ef6b88360cdfd95aa",
+  "stored_sig_sha256": "7fa5463c1c9db83a736572678589ab7fd3170a46172c28f2b22461fa610ba00b",
+  "note": "Stored signature fails verification against current indusv_v2 key. Legacy pre-Rev7 entry."
+}
