@@ -178,3 +178,15 @@ I certify that the above forensic reconstruction accurately reflects the procedu
 
 
 - NOTE (Day25-Reconciliation): legacy public key indusv_v1 not present locally; see logs/verification_annotations.json for details. Recorded: 2025-11-08T12:36:16.517826Z
+
+## Legacy verification status (summary)
+- Date checked: 2025-11-11T00:00:00Z
+- Finding: Several historical NDJSON entries contain detached signatures that do not verify with current key(s) in keys/.
+- Evidence sample:
+  - artifact_id: TEST-RELEASE-0002
+  - stored entry_hash: 656c0902ef26...
+  - computed canonical SHA256: c2abacd2696f...
+  - stored signature length: 512 bytes
+  - stored signature SHA256: 7fa5463c1c9d...
+  - conclusion: stored signature was produced by a different private key (legacy key missing or different). Do not retro-sign.
+- Remediation: keep entries as-is; publish new authoritative snapshot signed by current key `indusv_v2` and reference it here.
