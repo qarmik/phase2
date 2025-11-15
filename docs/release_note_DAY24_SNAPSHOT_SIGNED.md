@@ -33,7 +33,7 @@ The authoritative audit export for Day 24 (Rev7 public snapshot) is published at
 https://github.com/qarmik/phase2/releases/tag/EU-FRAUD-TSA-2025Q4-snapshot
 
 Asset: fraud_audit_export_FRAUD-TSA-2025-AUTH-SNAPSHOT.zip
-SHA-256: <PASTE_HEX_HERE>
+SHA-256: 3d54e907a79c6e9d6edbfb35640a22b97b225f238d0d58738fb37da46908c4f1
 
 This ZIP contains:
 - logs/public_timestamp.ndjson (append-only chain),
