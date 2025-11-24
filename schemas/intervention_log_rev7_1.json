@@ -1,0 +1,30 @@
+{
+  "$id": "https://indusv.ai/schemas/intervention_log_rev7_1.json",
+  "title": "Intervention Log — Protocol Qv 7.1",
+  "type": "object",
+
+  "properties": {
+    "event_id": { "type": "string" },
+    "timestamp_utc": { "type": "string", "format": "date-time" },
+    "artifact_id": { "type": "string" },
+    "model_version": { "type": "string" },
+    "input_hash": { "type": "string" },
+    "output_hash": { "type": "string" },
+    "human_reason": { "type": "string" },
+    "decision_summary": { "type": "string" },
+
+    "eu_single_entry_point": {
+      "$ref": "sep_block.json"
+    }
+  },
+
+  "required": [
+    "event_id",
+    "timestamp_utc",
+    "artifact_id",
+    "input_hash",
+    "output_hash",
+    "human_reason",
+    "eu_single_entry_point"
+  ]
+}

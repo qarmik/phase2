@@ -1,0 +1,33 @@
+{
+  "$id": "https://indusv.ai/schemas/sep_block.json",
+  "title": "EU Single Entry Point Routing Block",
+  "type": "object",
+  "properties": {
+    "route": {
+      "type": "string",
+      "enum": ["ENISA"]
+    },
+    "routing_classification": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["AI_ACT_73", "GDPR_33", "NIS2", "DORA", "CER"]
+      },
+      "minItems": 1
+    },
+    "harmonized_template": {
+      "type": "boolean"
+    },
+    "transitional_window_months": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 36
+    }
+  },
+  "required": [
+    "route",
+    "routing_classification",
+    "harmonized_template",
+    "transitional_window_months"
+  ]
+}

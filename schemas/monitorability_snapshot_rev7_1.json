@@ -1,0 +1,24 @@
+{
+  "$id": "https://indusv.ai/schemas/monitorability_snapshot_rev7_1.json",
+  "title": "Monitorability Snapshot — Protocol Qv 7.1",
+  "type": "object",
+
+  "properties": {
+    "id": { "type": "string" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "faithfulness_score": { "type": "number" },
+    "qvm_alert": { "type": ["string", "null"] },
+    "source_trace": { "type": "string" },
+
+    "eu_single_entry_point": {
+      "$ref": "sep_block.json"
+    }
+  },
+
+  "required": [
+    "id",
+    "generated_at",
+    "faithfulness_score",
+    "eu_single_entry_point"
+  ]
+}
