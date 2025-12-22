@@ -3,52 +3,86 @@
   "$id": "https://indusv.ai/schemas/intervention_log_rev7_1.json",
   "title": "Intervention Log — Protocol Qv Rev 7.1",
   "type": "object",
+  "additionalProperties": false,
+
   "required": [
+    "schema_version",
     "intervention_id",
     "timestamp_utc",
-    "artifact_id",
-    "intervention_type",
-    "human_actor",
     "decision_summary",
-    "eu_single_entry_point",
-    "evidence_refs"
+    "human_accountable",
+    "eu_single_entry_point"
   ],
+
   "properties": {
-    "intervention_id": { "type": "string" },
-    "timestamp_utc": { "type": "string", "format": "date-time" },
-    "artifact_id": { "type": "string" },
+    "schema_version": {
+      "type": "string",
+      "const": "qv_rev7_1"
+    },
+
+    "intervention_id": {
+      "type": "string"
+    },
+
+    "timestamp_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+
+    "artifact_id": {
+      "type": "string"
+    },
+
     "intervention_type": {
       "type": "string",
       "enum": ["OVERRIDE", "ESCALATION", "ROLLBACK", "SHUTDOWN"]
     },
-    "human_actor": {
+
+    "decision_summary": {
+      "type": "string"
+    },
+
+    "human_accountable": {
       "type": "object",
-      "required": ["role", "reason"],
+      "required": ["role", "identifier"],
+      "additionalProperties": false,
       "properties": {
         "role": { "type": "string" },
-        "reason": { "type": "string" }
+        "identifier": { "type": "string" }
       }
     },
-    "decision_summary": { "type": "string" },
+
     "eu_single_entry_point": {
       "type": "object",
-      "required": ["route", "routing_classification", "harmonized_template"],
+      "additionalProperties": false,
+      "required": [
+        "route",
+        "routing_classification",
+        "harmonized_template"
+      ],
       "properties": {
-        "route": { "type": "string", "const": "ENISA" },
+        "route": {
+          "type": "string",
+          "const": "ENISA"
+        },
         "routing_classification": {
           "type": "array",
           "items": {
             "type": "string",
             "enum": ["AI_ACT_73", "GDPR_33", "NIS2", "DORA", "CER"]
-          }
+          },
+          "minItems": 1
         },
-        "harmonized_template": { "type": "boolean", "const": true }
+        "harmonized_template": {
+          "type": "boolean",
+          "const": true
+        }
       }
     },
+
     "evidence_refs": {
       "type": "array",
       "items": { "type": "string" }
     }
-  },
-  "additionalProperties": false
+  }
 }
