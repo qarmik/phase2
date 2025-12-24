@@ -1,0 +1,69 @@
+{
+  "incident_id": "INC-20251224T013917Z",
+  "generated_at": "2025-12-24T01:39:17.476446Z",
+  "incident_status": "IDENTIFIED",
+  "scope_note": "Pre-notification evidence pack. No escalation or regulatory reporting has occurred.",
+  "eu_single_entry_point": {
+    "route": "ENISA",
+    "routing_classification": [
+      "AI_ACT_73",
+      "GDPR_33",
+      "NIS2",
+      "DORA",
+      "CER"
+    ],
+    "harmonized_template": true
+  },
+  "bound_evidence": {
+    "intervention_log": {
+      "schema_version": "qv_rev7_1",
+      "intervention_id": "INT-2025-12-21-0001",
+      "timestamp_utc": "2025-12-21T05:30:00Z",
+      "artifact_id": "EU-FRAUD-TSA-2025Q4",
+      "intervention_type": "ESCALATION",
+      "human_accountable": {
+        "role": "Risk Officer",
+        "identifier": "officer_anon_001"
+      },
+      "decision_summary": "Model confidence dropped below policy threshold during fraud adjudication.",
+      "eu_single_entry_point": {
+        "route": "ENISA",
+        "routing_classification": [
+          "AI_ACT_73",
+          "GDPR_33",
+          "NIS2",
+          "DORA",
+          "CER"
+        ],
+        "harmonized_template": true
+      },
+      "evidence_refs": [
+        "logs/monitorability_snapshot.jsonld",
+        "logs/public_timestamp.ndjson"
+      ]
+    },
+    "monitorability_snapshot": {
+      "@context": [
+        "https://www.w3.org/ns/activitystreams",
+        {
+          "qv": "urn:qvm"
+        }
+      ],
+      "id": "urn:monitorability:phase2:stage1:fraud:d80df09392f3",
+      "type": "MonitorabilitySnapshot",
+      "generated_at": "2025-11-08T20:07:13Z",
+      "faithfulness_score": 0.0,
+      "qvm_alert": false,
+      "trace_summary": {
+        "artifact_id": "FRAUD-TSA-2025-AUTH-VERIFIED",
+        "timestamp": "2025-11-08T18:27:06.665817Z"
+      },
+      "monitor_log_events": 1
+    }
+  },
+  "observed_gaps": [
+    "Monitorability snapshot missing field: faithfulness",
+    "Monitorability snapshot missing field: monitorability"
+  ],
+  "sha256": "ee5d4edd1f7061ad686c8442daa4a864ed2990f9ad05d74871bccbf1c216fbc8"
+}
