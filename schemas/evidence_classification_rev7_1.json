@@ -1,0 +1,17 @@
+{
+  "schema_version": "qv_rev7_1",
+  "artifact_type": "evidence_classification",
+  "incident_id": "string",
+  "classified_at_utc": "ISO-8601 UTC timestamp",
+  "evidence_items": [
+    {
+      "evidence_id": "string",
+      "source_path": "string",
+      "evidence_type": "observed_fact | inferred_relation | unknown",
+      "confidence_note": "string",
+      "classification_rationale": "string",
+      "tamper_risk": "low | medium | high"
+    }
+  ],
+  "classification_hash_sha256": "string"
+}

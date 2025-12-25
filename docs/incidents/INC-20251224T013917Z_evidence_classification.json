@@ -1,0 +1,25 @@
+{
+  "schema_version": "qv_rev7_1",
+  "artifact_type": "evidence_classification",
+  "incident_id": "INC-20251224T013917Z",
+  "classified_at_utc": "2025-12-25T18:34:52.484939+00:00",
+  "evidence_items": [
+    {
+      "evidence_id": "aefed842a243d4e52816d7d8fc3858f1992345cfd356efe8047b235383591cdf",
+      "source_path": "logs\\intervention_log_sample_rev7_1.json",
+      "evidence_type": "unknown",
+      "confidence_note": "Initial classification defaults to unknown.",
+      "classification_rationale": "Evidence has not yet been analyzed sufficiently to be asserted as observed fact or inferred relation.",
+      "tamper_risk": "low"
+    },
+    {
+      "evidence_id": "5408bccf1b1477ecddfe81007c4f935956a9c8cf4cfbe2626a70b4e026270529",
+      "source_path": "logs\\monitorability_snapshot.jsonld",
+      "evidence_type": "unknown",
+      "confidence_note": "Initial classification defaults to unknown.",
+      "classification_rationale": "Evidence has not yet been analyzed sufficiently to be asserted as observed fact or inferred relation.",
+      "tamper_risk": "low"
+    }
+  ],
+  "classification_hash_sha256": "0b6e5a9576558d68a57514e4f4acf1a02e950f0e0f1002a2ac45f592fa16f452"
+}
