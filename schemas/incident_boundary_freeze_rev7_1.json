@@ -1,0 +1,15 @@
+{
+  "schema_version": "qv_rev7_1",
+  "artifact_type": "incident_boundary_freeze",
+  "incident_id": "string",
+  "freeze_timestamp_utc": "ISO-8601 UTC timestamp",
+  "in_scope_evidence": [
+    {
+      "type": "string",
+      "path": "string",
+      "hash_sha256": "string"
+    }
+  ],
+  "out_of_scope_note": "string",
+  "freeze_hash_sha256": "string"
+}
