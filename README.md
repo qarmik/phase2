@@ -1,79 +1,106 @@
-Protocol-Version: Qv Rev 7 (Draft 0.1)
-classification: EXTERNAL-INDUSTRY
+# Protocol Qv — Phase II Repository (Rev 7.1)
 
-# Indus V-ai — Phase II: Artifact Literacy Campaign (2025–2026)
-
-This repository contains the training and artifact-building sequence for the Indus V-ai initiative — a boutique assurance and adversarial oversight lab.  
-Phase II (Oct 2025 → Mar 2026) focuses on **artifact literacy**: building ≤ 200 LOC regulatory-grade Python artifacts mapped to EU AI Act / RBI compliance / insurer liability standards.
-
----
-
-## 📜 Core Doctrine
-
-- **Artifact Families:**  
-  1. Fraud Red-Team Testbed (synthetic borrowers, mule scripts)  
-  2. Compliance Audit Pack (RBI + EU AI Act checklists + DPIA/FRIA)  
-  3. Consumer Trust Explainability Pack  
-  4. Healthcare / Insurance Oversight Module  
-  5. Compute / Energy Chokepoint Lens  
+**Date:** 26 December 2025  
+**Status:** Active (Public, Non-Product)  
+**Scope:** Post-incident AI accountability artifacts  
+**Authority:** Protocol Qv Rev 7.1 (unchanged)
 
 ---
 
-## ⚙️ Repository Layout
-phase2/
-├── fraud/ # Stage 1 – Fraud Red-Team Testbed
-│ ├── fraud_simulator.py
-│ ├── fraud_logger.py
-│ ├── fraud_metrics.py
-│ └── score_engine.py
-│
-├── compliance/ # Stage 2 – Compliance Audit Pack
-│ ├── compliance_ingestor.py
-│ ├── compliance_validator.py
-│ └── output/compliance_checklist.md
-│
-├── artifacts/
-│ └── evidence/ # DPIA / FRIA JSON outputs
-│
-├── docs/
-│ ├── 42001-mapping.md # ISO 42001 alignment checklist
-│ └── explaination.md
-│
-├── tests/ # pytest unit tests
-│ └── test_score_engine.py
-│
-└── README.md
+## Overview
 
-yaml
-Copy code
+This repository contains the **public, artifact-based development** of **Protocol Qv Rev 7.1**, a post-incident governance protocol for AI systems.  
+The work here is **evidence-first** and **post-deployment**: it focuses on how incidents are bounded, preserved, classified, and handed to regulators without narrative distortion.
+
+This is **not** a software product.  
+It is a **doctrine under construction**, expressed through concrete, runnable artifacts.
 
 ---
 
-## 🧩 Tools & Environment
-- Python ≥ 3.10  
-- Virtual env: `.venv/`  
-- Libraries: `pytest`, `pandas`, `scikit-learn` (Stage 3+)  
-- Logging and Integrity: `hashlib`, `json`, `pathlib`  
-- CLI tested on Git Bash (Windows 10)
+## What This Repository Contains
+
+- Canonical **incident artifacts** (JSON/Markdown) suitable for audit and regulatory review
+- Deterministic **tooling** used to generate, freeze, and verify those artifacts
+- Append-only **logs and timestamps** establishing integrity and non-repudiation
+- Documentation that records **what is enforced today**, without promises
+
+All artifacts adhere to the following constraints:
+- ≤200 LOC per tool
+- Deterministic outputs
+- Append-only where applicable
+- Explainable to a regulator in ≤2 minutes
 
 ---
 
-## 🧱 Stage Summary (progress)
-| Stage | Artifact | Status |
-|--------|-----------|---------|
-| 1 | Fraud Red-Team Simulator + Immutable Intervention Log | ✅ Completed |
-| 2 | Compliance Ingestor + Validator | ✅ Completed |
-| 3 | Automated Scoring Stub + DPIA/FRIA Hook | 🚧 In progress |
-| 4 | Healthcare / Insurance Oversight | ⏳ Scheduled |
-| 5 | Compute / Energy Chokepoint Lens | ⏳ Pending deployment |
+## Implemented Controls (Protocol Qv Rev 7.1)
+
+The following controls are **implemented and verifiable** in this repository.
+
+### Incident Boundary Freezing (GAP 1)
+
+- A hash-anchored boundary artifact freezes the incident scope at a specific time.
+- In-scope and out-of-scope evidence are explicitly declared.
+- Retroactive scope expansion or contraction is prevented.
+
+**Artifacts:**  
+`docs/incidents/*_boundary_freeze.json`
 
 ---
 
-## 🧭 Licensing & Credits
-© 2025 Indus V-ai Initiative — Rohit Kumar (Cadet Q0)  
-Mission Advisor: Commander V (AI Strategist)  
-Licensed for research and regulatory demonstration under Creative Commons BY-NC 4.0.
+### Evidence Classification with Unknown Preservation (GAP 2)
+
+- All evidence within a frozen boundary is classified as:
+  - `observed_fact`
+  - `inferred_relation`
+  - `unknown`
+- Default classification is `unknown` unless explicitly justified.
+- Uncertainty is preserved rather than silently resolved.
+
+**Artifacts:**  
+`docs/incidents/*_evidence_classification.json`
 
 ---
 
-*Mantra:* _Not scale, but scars. Not speed, but sovereignty._
+## Regulatory Routing
+
+All EU-relevant incidents are prepared for routing via the **ENISA Single Entry Point (SEP)**, with harmonized classification for:
+
+- AI Act Article 73
+- GDPR Article 33
+- NIS2
+- DORA
+- CER
+
+Routing readiness does not imply notification has occurred unless explicitly stated in an artifact.
+
+---
+
+## What This Repository Does Not Claim
+
+- It does not guarantee safety, compliance, or correctness of AI systems.
+- It does not provide predictive risk scoring or pre-deployment assurances.
+- It does not claim completion of all Protocol Qv gaps.
+- It does not include roadmaps, timelines, or future commitments.
+
+Absence of an artifact implies the control is **not yet enforced**.
+
+---
+
+## Contribution Model
+
+Protocol Qv evolves through **artifacts, not proposals**.  
+External contributions are expected to be concrete, minimal, and auditable.
+
+---
+
+## Integrity and Disclosure
+
+Key loss events are treated as forensic facts, not corrected retroactively.  
+Legacy non-verifiable entries are explicitly disclosed where applicable.
+
+---
+
+## License
+
+Documentation and code are provided for research, regulatory examination, and public scrutiny.  
+No warranty is implied.
