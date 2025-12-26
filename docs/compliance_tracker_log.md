@@ -1,3 +1,11 @@
+This tracker does not constitute a compliance assertion or certification.
+
+
+
+
+
+
+
 \# Compliance Tracker Log
 
 
@@ -21,6 +29,4 @@
 \- \*\*Operator:\*\* Rohit Kumar (Cadet Q0)
 
 \- \*\*Notes:\*\* Integrity verified locally; detached snapshots are authoritative.
-
-
 

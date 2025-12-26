@@ -1,3 +1,9 @@
+> Scope: External auditor notification template.  
+> This document records disclosure, not enforcement.
+
+
+
+
 \# Auditor-Ready Notice — Day 25 External Anchor
 
 

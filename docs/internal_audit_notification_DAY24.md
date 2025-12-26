@@ -1,3 +1,8 @@
+> Scope: Internal audit communication template.  
+> This document is not a canonical incident artifact.
+
+
+
 Email/notification template to send to auditors / insurers
 
 

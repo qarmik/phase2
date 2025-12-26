@@ -1,3 +1,8 @@
+> Scope: Draft explanatory note prepared for potential notified-body review.  
+> Presence does not imply submission or regulatory notification.
+
+
+
 \# For Notified Body — Submission Checklist \& Verification Guide
 
 
