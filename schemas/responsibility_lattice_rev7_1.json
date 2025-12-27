@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Responsibility Lattice (Intervention-Level)",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "artifact_type",
+    "incident_id",
+    "intervention_id",
+    "actors",
+    "validation_outcome",
+    "failure_modes",
+    "lattice_hash_sha256"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["qv_rev7_1"] },
+    "artifact_type": { "type": "string", "enum": ["responsibility_lattice"] },
+    "incident_id": { "type": "string" },
+    "intervention_id": { "type": "string" },
+    "actors": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "actor_type",
+          "role_name",
+          "decision_authority",
+          "control_points",
+          "override_power",
+          "accountability_scope"
+        ],
+        "properties": {
+          "actor_type": {
+            "type": "string",
+            "enum": ["vendor", "deployer", "human_operator", "governance", "external_regulator"]
+          },
+          "role_name": { "type": "string", "minLength": 1 },
+          "decision_authority": { "type": "string", "minLength": 1 },
+          "control_points": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "override_power": { "type": "string", "enum": ["none", "limited", "full"] },
+          "accountability_scope": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "validation_outcome": { "type": "string", "enum": ["valid", "invalid"] },
+    "failure_modes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "lattice_hash_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+  }
+}

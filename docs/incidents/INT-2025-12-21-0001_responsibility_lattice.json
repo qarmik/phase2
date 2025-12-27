@@ -1,0 +1,44 @@
+{
+  "schema_version": "qv_rev7_1",
+  "artifact_type": "responsibility_lattice",
+  "incident_id": "INC-20251224T013917Z",
+  "intervention_id": "INT-2025-12-21-0001",
+  "actors": [
+    {
+      "actor_type": "human_operator",
+      "role_name": "Risk Officer",
+      "decision_authority": "Authority to halt automated adjudication when confidence drops below policy threshold.",
+      "control_points": [
+        "fraud_adjudication_override",
+        "manual_review_trigger"
+      ],
+      "override_power": "limited",
+      "accountability_scope": "Responsible for approving or rejecting fraud decisions when automated confidence is insufficient."
+    },
+    {
+      "actor_type": "deployer",
+      "role_name": "Bank Operations Management",
+      "decision_authority": "Authority to define escalation policies and thresholds for automated fraud systems.",
+      "control_points": [
+        "policy_threshold_definition",
+        "escalation_policy_configuration"
+      ],
+      "override_power": "limited",
+      "accountability_scope": "Responsible for setting operational policies governing automated fraud detection."
+    },
+    {
+      "actor_type": "vendor",
+      "role_name": "Model Provider",
+      "decision_authority": "Authority to design, train, and update the fraud detection model architecture.",
+      "control_points": [
+        "model_architecture",
+        "training_data_selection"
+      ],
+      "override_power": "none",
+      "accountability_scope": "Responsible for model behavior within declared design constraints, but not for live operational decisions."
+    }
+  ],
+  "validation_outcome": "valid",
+  "failure_modes": [],
+  "lattice_hash_sha256": "d64f90cf75f528cf68ee417c0bcb1c9cfce037f70301e7e0bcfb2938a639b3ec"
+}
