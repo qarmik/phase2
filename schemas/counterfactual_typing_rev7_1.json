@@ -1,0 +1,22 @@
+{
+  "schema_version": "qv_rev7_1",
+  "artifact_type": "counterfactual_typing",
+  "required_fields": [
+    "counterfactual_id",
+    "statement",
+    "classification",
+    "reason",
+    "evaluated_against",
+    "evaluated_at_utc"
+  ],
+  "classification_enum": [
+    "accepted_counterfactual",
+    "rejected_counterfactual"
+  ],
+  "rejection_reason_enum": [
+    "unreasonable_expectation",
+    "victim_blame",
+    "non_actionable",
+    "institutionally_impossible"
+  ]
+}

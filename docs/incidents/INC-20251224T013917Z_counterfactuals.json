@@ -1,0 +1,28 @@
+{
+  "schema_version": "qv_rev7_1",
+  "artifact_type": "counterfactual_typing",
+  "incident_id": "INC-20251224T013917Z",
+  "evaluated_against": "INT-2025-12-21-0001",
+  "evaluated_at_utc": "2025-12-29T00:13:36.569434+00:00",
+  "counterfactuals": [
+    {
+      "counterfactual_id": "CF-001",
+      "statement": "The model should have overridden itself before flagging the transaction.",
+      "classification": "rejected_counterfactual",
+      "reason": "institutionally_impossible"
+    },
+    {
+      "counterfactual_id": "CF-002",
+      "statement": "The Risk Officer could have stopped the automated decision.",
+      "classification": "accepted_counterfactual",
+      "reason": null
+    },
+    {
+      "counterfactual_id": "CF-003",
+      "statement": "The customer should have avoided the transaction.",
+      "classification": "rejected_counterfactual",
+      "reason": "victim_blame"
+    }
+  ],
+  "counterfactual_hash_sha256": "d825710a283b61c3fc46a4efd640b1abc79e5913619d62fdf3a45018e8d9f501"
+}
