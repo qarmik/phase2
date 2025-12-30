@@ -1,0 +1,136 @@
+{
+  "schema_version": "qv_rev7_1",
+  "artifact_type": "unified_incident_record",
+  "incident_id": "INC-20251224T013917Z",
+  "created_at_utc": "2025-12-30T01:45:29.408400+00:00",
+  "incident_boundary": {
+    "schema_version": "qv_rev7_1",
+    "artifact_type": "incident_boundary_freeze",
+    "incident_id": "INC-20251224T013917Z",
+    "freeze_timestamp_utc": "2025-12-25T18:19:57.189717+00:00",
+    "in_scope_evidence": [
+      {
+        "type": "intervention_log",
+        "path": "logs\\intervention_log_sample_rev7_1.json",
+        "hash_sha256": "aefed842a243d4e52816d7d8fc3858f1992345cfd356efe8047b235383591cdf"
+      },
+      {
+        "type": "monitorability_snapshot",
+        "path": "logs\\monitorability_snapshot.jsonld",
+        "hash_sha256": "5408bccf1b1477ecddfe81007c4f935956a9c8cf4cfbe2626a70b4e026270529"
+      }
+    ],
+    "out_of_scope_note": "Any evidence generated after freeze_timestamp_utc is explicitly excluded from this incident boundary.",
+    "freeze_hash_sha256": "1ec615547994306dfd7cbb8693ccfa03c2e29360c794e88885759143577cf0ec"
+  },
+  "evidence_classification": {
+    "schema_version": "qv_rev7_1",
+    "artifact_type": "evidence_classification",
+    "incident_id": "INC-20251224T013917Z",
+    "classified_at_utc": "2025-12-25T18:34:52.484939+00:00",
+    "evidence_items": [
+      {
+        "evidence_id": "aefed842a243d4e52816d7d8fc3858f1992345cfd356efe8047b235383591cdf",
+        "source_path": "logs\\intervention_log_sample_rev7_1.json",
+        "evidence_type": "unknown",
+        "confidence_note": "Initial classification defaults to unknown.",
+        "classification_rationale": "Evidence has not yet been analyzed sufficiently to be asserted as observed fact or inferred relation.",
+        "tamper_risk": "low"
+      },
+      {
+        "evidence_id": "5408bccf1b1477ecddfe81007c4f935956a9c8cf4cfbe2626a70b4e026270529",
+        "source_path": "logs\\monitorability_snapshot.jsonld",
+        "evidence_type": "unknown",
+        "confidence_note": "Initial classification defaults to unknown.",
+        "classification_rationale": "Evidence has not yet been analyzed sufficiently to be asserted as observed fact or inferred relation.",
+        "tamper_risk": "low"
+      }
+    ],
+    "classification_hash_sha256": "0b6e5a9576558d68a57514e4f4acf1a02e950f0e0f1002a2ac45f592fa16f452"
+  },
+  "responsibility_lattice": {
+    "schema_version": "qv_rev7_1",
+    "artifact_type": "responsibility_lattice",
+    "incident_id": "INC-20251224T013917Z",
+    "intervention_id": "INT-2025-12-21-0001",
+    "actors": [
+      {
+        "actor_type": "human_operator",
+        "role_name": "Risk Officer",
+        "decision_authority": "Authority to halt automated adjudication when confidence drops below policy threshold.",
+        "control_points": [
+          "fraud_adjudication_override",
+          "manual_review_trigger"
+        ],
+        "override_power": "limited",
+        "accountability_scope": "Responsible for approving or rejecting fraud decisions when automated confidence is insufficient."
+      },
+      {
+        "actor_type": "deployer",
+        "role_name": "Bank Operations Management",
+        "decision_authority": "Authority to define escalation policies and thresholds for automated fraud systems.",
+        "control_points": [
+          "policy_threshold_definition",
+          "escalation_policy_configuration"
+        ],
+        "override_power": "limited",
+        "accountability_scope": "Responsible for setting operational policies governing automated fraud detection."
+      },
+      {
+        "actor_type": "vendor",
+        "role_name": "Model Provider",
+        "decision_authority": "Authority to design, train, and update the fraud detection model architecture.",
+        "control_points": [
+          "model_architecture",
+          "training_data_selection"
+        ],
+        "override_power": "none",
+        "accountability_scope": "Responsible for model behavior within declared design constraints, but not for live operational decisions."
+      }
+    ],
+    "validation_outcome": "valid",
+    "failure_modes": [],
+    "lattice_hash_sha256": "d64f90cf75f528cf68ee417c0bcb1c9cfce037f70301e7e0bcfb2938a639b3ec"
+  },
+  "counterfactuals": {
+    "schema_version": "qv_rev7_1",
+    "artifact_type": "counterfactual_typing",
+    "incident_id": "INC-20251224T013917Z",
+    "evaluated_against": "INT-2025-12-21-0001",
+    "evaluated_at_utc": "2025-12-29T00:13:36.569434+00:00",
+    "counterfactuals": [
+      {
+        "counterfactual_id": "CF-001",
+        "statement": "The model should have overridden itself before flagging the transaction.",
+        "classification": "rejected_counterfactual",
+        "reason": "institutionally_impossible"
+      },
+      {
+        "counterfactual_id": "CF-002",
+        "statement": "The Risk Officer could have stopped the automated decision.",
+        "classification": "accepted_counterfactual",
+        "reason": null
+      },
+      {
+        "counterfactual_id": "CF-003",
+        "statement": "The customer should have avoided the transaction.",
+        "classification": "rejected_counterfactual",
+        "reason": "victim_blame"
+      }
+    ],
+    "counterfactual_hash_sha256": "d825710a283b61c3fc46a4efd640b1abc79e5913619d62fdf3a45018e8d9f501"
+  },
+  "declared_unknowns": [
+    {
+      "evidence_id": "aefed842a243d4e52816d7d8fc3858f1992345cfd356efe8047b235383591cdf",
+      "reason": "Initial classification defaults to unknown."
+    },
+    {
+      "evidence_id": "5408bccf1b1477ecddfe81007c4f935956a9c8cf4cfbe2626a70b4e026270529",
+      "reason": "Initial classification defaults to unknown."
+    }
+  ],
+  "integrity": {
+    "record_hash_sha256": "5e87393a46daab7684317a0460824c9f0e18ca1b4e962d749cc08ca3b8ede7c1"
+  }
+}
