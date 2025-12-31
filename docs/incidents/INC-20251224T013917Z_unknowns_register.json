@@ -1,0 +1,27 @@
+{
+  "schema_version": "qv_rev7_1",
+  "artifact_type": "unknowns_register",
+  "incident_id": "INC-20251224T013917Z",
+  "generated_at_utc": "2025-12-31T01:15:46.304089+00:00",
+  "unknowns": [
+    {
+      "unknown_id": "UNK-aefed842a243",
+      "evidence_id": "aefed842a243d4e52816d7d8fc3858f1992345cfd356efe8047b235383591cdf",
+      "description": "Evidence present but not yet asserted as observed fact or inferred relation.",
+      "why_unknown": "Initial classification defaults to unknown.",
+      "knowable_in_principle": true,
+      "declared_at_utc": "2025-12-31T01:15:46.304089+00:00"
+    },
+    {
+      "unknown_id": "UNK-5408bccf1b14",
+      "evidence_id": "5408bccf1b1477ecddfe81007c4f935956a9c8cf4cfbe2626a70b4e026270529",
+      "description": "Evidence present but not yet asserted as observed fact or inferred relation.",
+      "why_unknown": "Initial classification defaults to unknown.",
+      "knowable_in_principle": true,
+      "declared_at_utc": "2025-12-31T01:15:46.304089+00:00"
+    }
+  ],
+  "integrity": {
+    "register_hash_sha256": "1405a46675bab2ded9e139c780b7cee1ce441b7b7ced06c90e7579ae9a806797"
+  }
+}

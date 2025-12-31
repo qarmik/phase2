@@ -1,0 +1,18 @@
+{
+  "schema_version": "qv_rev7_1",
+  "artifact_type": "unknowns_register",
+  "required_fields": [
+    "incident_id",
+    "generated_at_utc",
+    "unknowns",
+    "integrity"
+  ],
+  "unknown_fields": [
+    "unknown_id",
+    "evidence_id",
+    "description",
+    "why_unknown",
+    "knowable_in_principle",
+    "declared_at_utc"
+  ]
+}
