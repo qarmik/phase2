@@ -1,0 +1,12 @@
+{
+  "schema_version": "qv_rev7_1",
+  "artifact_type": "incident_severity",
+  "severity_enum": ["minor", "serious", "systemic"],
+  "required_fields": [
+    "incident_id",
+    "classified_at_utc",
+    "severity",
+    "criteria_met",
+    "integrity"
+  ]
+}

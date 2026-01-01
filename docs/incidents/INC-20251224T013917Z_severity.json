@@ -1,0 +1,15 @@
+{
+  "schema_version": "qv_rev7_1",
+  "artifact_type": "incident_severity",
+  "incident_id": "INC-20251224T013917Z",
+  "classified_at_utc": "2026-01-01T01:40:25.768548+00:00",
+  "severity": "serious",
+  "criteria_met": [
+    "unresolved_unknowns_present",
+    "human_intervention_occurred",
+    "multiple_counterfactuals_assessed"
+  ],
+  "integrity": {
+    "severity_hash_sha256": "445ef1371e135a183d4edd5237e182cddc7889f2f76268b66d642c6280695d6a"
+  }
+}
