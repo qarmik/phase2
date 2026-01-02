@@ -1,0 +1,38 @@
+{
+  "schema_version": "qv_rev7_1",
+  "artifact_type": "regulator_handoff_pack",
+  "incident_id": "INC-20251224T013917Z",
+  "generated_at_utc": "2026-01-02T00:25:03.294777+00:00",
+  "routing": {
+    "eu_single_entry_point": {
+      "route": "ENISA",
+      "routing_classification": [
+        "AI_ACT_73",
+        "GDPR_33",
+        "NIS2",
+        "DORA",
+        "CER"
+      ],
+      "harmonized_template": true
+    }
+  },
+  "included_artifacts": [
+    "unified_incident_record",
+    "incident_severity",
+    "unknowns_register"
+  ],
+  "excluded_artifacts": [
+    "notification_timeline",
+    "legal_assessment",
+    "root_cause_analysis",
+    "remediation_plan"
+  ],
+  "references": {
+    "unified_record_hash": "5e87393a46daab7684317a0460824c9f0e18ca1b4e962d749cc08ca3b8ede7c1",
+    "severity_hash": "445ef1371e135a183d4edd5237e182cddc7889f2f76268b66d642c6280695d6a",
+    "unknowns_hash": "1405a46675bab2ded9e139c780b7cee1ce441b7b7ced06c90e7579ae9a806797"
+  },
+  "integrity": {
+    "handoff_pack_hash_sha256": "1876c67541a449e72f0509653e339be6762f867b6d6364090609ae58fbc09fed"
+  }
+}
