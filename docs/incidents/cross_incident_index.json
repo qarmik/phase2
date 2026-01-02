@@ -1,0 +1,24 @@
+{
+  "schema_version": "qv_rev7_1",
+  "artifact_type": "cross_incident_index",
+  "index_generated_at_utc": "2026-01-02T23:22:41.561557+00:00",
+  "incidents": [
+    {
+      "incident_id": "INC-20251224T013917Z",
+      "boundary_hash_sha256": "1ec615547994306dfd7cbb8693ccfa03c2e29360c794e88885759143577cf0ec",
+      "incident_severity": "serious",
+      "intervention_types": [
+        "intervention_log",
+        "monitorability_snapshot"
+      ],
+      "responsible_roles": [],
+      "evidence_profile": {
+        "observed_fact": 0,
+        "inferred_relation": 0,
+        "unknown": 2
+      },
+      "unknowns_count": 2,
+      "incident_timestamp_utc": "2025-12-25T18:19:57.189717+00:00"
+    }
+  ]
+}
