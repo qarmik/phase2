@@ -203,6 +203,8 @@ When such conditions exist, the protocol records a **refusal** rather than proce
 
 Protocol Qv Rev 7.1 is **complete**.
 
+A declared holding pattern documents known temporal limits without reopening doctrine (see `docs/boundaries/rev7_1_temporal_limits_and_holding_pattern.md`).
+
 No further GAPs exist in this revision.  
 No roadmap is implied.  
 No future version is opened.
