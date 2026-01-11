@@ -1,11 +1,11 @@
 # PR Archive — Stage 1: Fraud Red-Team Merge
 **Branch merged:** stage1/fraud-day9 → stage1/fraud  
-**Author:** Cadet Q0 (Rohit Kumar)  
-**Reviewed by:** Commander V (AI strategist)  
+**Author:** Documented operator  
+**Reviewed by:** Independent review  
 **Date (merge):** 2025-10-11
 
 ## Summary (one line)
-Merge README + .gitignore + Day-9 scoring artifacts into Stage 1 main branch to complete Phase II Stage-1 audit loop (Simulator → Immutable Intervention Log → Metrics → Compliance Ingestor → Validator → Score Engine).
+Merge README + .gitignore + Day-9 scoring artifacts into Stage 1 main branch to complete Post-incident audit loop (Simulator → Immutable Intervention Log → Metrics → Compliance Ingestor → Validator → Score Engine).
 
 ## What changed (concise)
 - Added `README.md` (Phase II overview, doctrine-safe copy).  

@@ -102,7 +102,7 @@ I declare that the above statements are accurate to the best of my knowledge.
 
 
 
-Operator: Rohit Kumar (Cadet Q0)
+Operator: Documented operator
 
 Date 05/11/2025: 17:15 IST
 

@@ -26,7 +26,7 @@ This tracker does not constitute a compliance assertion or certification.
 
 \- \*\*Tag:\*\* EU-FRAUD-TSA-2025Q4-snapshot
 
-\- \*\*Operator:\*\* Rohit Kumar (Cadet Q0)
+\- \*\*Operator:\*\* Documented operator
 
 \- \*\*Notes:\*\* Integrity verified locally; detached snapshots are authoritative.
 

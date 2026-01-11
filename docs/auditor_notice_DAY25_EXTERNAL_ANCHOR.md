@@ -68,7 +68,7 @@
 
 >
 
-> Please find attached the Day-24/25 audit packet and cryptographic receipts for the FRAUD red-team artifact family (Phase II — stage1/fraud).
+> Please find attached the Day-24/25 audit packet and cryptographic receipts for the FRAUD red-team artifact family (Post-incident execution — fraud artifact set).
 
 >
 

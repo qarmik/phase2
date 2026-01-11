@@ -73,7 +73,7 @@ If you require a deeper forensic annex or assistance verifying specific entries,
 
 Regards,
 
-Rohit Kumar (Cadet Q0)
+Documented operator
 
 
 

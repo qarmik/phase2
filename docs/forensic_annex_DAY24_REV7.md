@@ -10,7 +10,7 @@
 
 \*\*Release Tag:\*\* EU-FRAUD-TSA-2025Q4-snapshot  
 
-\*\*Author / Operator:\*\* Rohit Kumar (Cadet Q0)  
+\*\*Author / Operator:\*\* Documented operator 
 
 \*\*Date:\*\* 2025-11-05 UTC  
 
@@ -168,7 +168,7 @@ I certify that the above forensic reconstruction accurately reflects the procedu
 
 
 
-\*\*Operator:\*\* Rohit Kumar (Cadet Q0)  
+\*\*Operator:\*\* Documented operator  
 
 \*\*Repository:\*\* qarmik/phase2 @ commit 040a076  
 
