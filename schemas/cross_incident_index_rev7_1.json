@@ -1,0 +1,22 @@
+{
+  "schema_version": "qv_rev7_1",
+  "artifact_type": "cross_incident_index",
+  "description": "Structural index enabling comparison of incidents without scoring or interpretation.",
+  "index_generated_at_utc": "string",
+  "incidents": [
+    {
+      "incident_id": "string",
+      "boundary_hash_sha256": "string",
+      "incident_severity": "minor | serious | systemic",
+      "intervention_types": ["string"],
+      "responsible_roles": ["string"],
+      "evidence_profile": {
+        "observed_fact": "integer",
+        "inferred_relation": "integer",
+        "unknown": "integer"
+      },
+      "unknowns_count": "integer",
+      "incident_timestamp_utc": "string"
+    }
+  ]
+}

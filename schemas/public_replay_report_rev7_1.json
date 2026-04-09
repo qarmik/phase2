@@ -1,0 +1,22 @@
+{
+  "schema_version": "qv_rev7_1",
+  "artifact_type": "public_replay_report",
+  "required_fields": [
+    "incident_id",
+    "replay_status",
+    "bundle_hash_sha256",
+    "environment",
+    "emitted_at_utc"
+  ],
+  "replay_status_enum": [
+    "VERIFIED",
+    "REFUSED"
+  ],
+  "refusal_reason_enum": [
+    "REFUSAL_TAMPER_DETECTED",
+    "REFUSAL_EVIDENCE_WITHHELD",
+    "REFUSAL_SOVEREIGN_BLOCK",
+    "REFUSAL_VENDOR_NONCOOP",
+    "REFUSAL_OUT_OF_SCOPE"
+  ]
+}

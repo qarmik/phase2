@@ -1,0 +1,12 @@
+{
+  "schema_version": "qv_rev7_1",
+  "artifact_type": "regulator_handoff_pack",
+  "required_sections": [
+    "incident_id",
+    "generated_at_utc",
+    "routing",
+    "included_artifacts",
+    "excluded_artifacts",
+    "integrity"
+  ]
+}
