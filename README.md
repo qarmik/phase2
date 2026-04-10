@@ -245,3 +245,4 @@ Documentation and code are provided for:
 - public scrutiny.
 
 **No warranty is implied.**
+Certain Rev 7.1 schemas were committed post-freeze to complete repository representation. No semantic changes were introduced.
